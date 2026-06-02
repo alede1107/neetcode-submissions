@@ -1,0 +1,12 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        countS = [0] *26
+        countT = [0] *26
+        if len(s) != len(t):
+            return False
+        for c in s:
+            countS[ord(c)-ord('a')]+=1
+        for n in t:
+            countT[ord(n)-ord('a')]+=1
+        return countS == countT
+        
